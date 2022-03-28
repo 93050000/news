@@ -1,0 +1,79 @@
+/*ks-list*/
+#content .ks-list{
+    width: 80%;
+	margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+}
+#content .ks-list .ks img{
+	height: 587px;/*图片高度*/
+	transition: all 0.3s ease;/*过度效果*/
+    width: 100%;
+}
+#content .ks-list .ks img:hover{
+	transform: scale(0.97);/*变形效果*/
+}
+
+#content .ks-list .ks .wide{
+	padding: 0;/*清除设定的内边距*/
+    width: 55%;
+    float: left;
+    flex:3;
+    margin: 20px  10px;
+}
+#content .ks-list .ks .narrow{
+	padding: 0;
+    width: 40%;
+    flex:1;
+    margin: 20px  10px;
+    float: left;
+}
+#content .ks-list .ks  h2,
+#content .ks-list .ks  h3{
+	margin-top:10px ;
+}
+#content .ks-list .ks h2 a {
+	font-size: 23px;
+	color: #000000;
+	font-weight: bolder;/*字体加粗*/
+}
+#content .ks-list .ks h2 span{
+	font-size: 13px;/*字体大小*/
+	color: #2ec84e;/*字体颜色*/
+	font-weight: bolder;/*字体加粗*/
+	margin-left: 10px;/*左外边距*/
+}
+#content .ks-list .ks h3{
+	font-size: 15px;/*字体大小*/
+}
+#content .ks-list .ks p{
+	font-size: 20px;/*字体大小*/
+	color: rgb(177, 33, 33);/*字体颜色*/
+	font-weight: 500;/*字体加粗*/
+	margin-top: 10px;
+}
+#content .ks-list .ks .action .learn-more{
+	display: inline-block;
+	width: 80px;
+	height: 32px;
+	line-height: 32px;/*与height设为相同值，实现垂直方向上文字居中显示*/
+	color: #fff;
+	font-size: 14px;
+	background-color: #494444;
+	text-align: center;/*文本居中*/
+    margin-top: 10px;
+}
+#content .ks-list .ks .action .buy{
+	font-size: 15px;
+	display: inline-block;
+	color: #000;
+	margin-left: 20px;/*左外边距*/
+	height: 22px;
+	border-bottom: 1px solid #000;/*下边框*/
+}
+#content .ks-list .ks .action .buy:hover{
+	color:rgb(177, 33, 33);
+	border-bottom: 1px solid rgb(177, 33, 33);
+}
+
+

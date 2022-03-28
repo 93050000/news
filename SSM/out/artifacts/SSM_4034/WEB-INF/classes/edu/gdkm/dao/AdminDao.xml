@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gdkm.dao.AdminDao">
+   <sql id="adminSql">
+      tb_admin(account,password,username,email,status) values
+      (#{account},#{password},#{username},#{email},#{status})
+   </sql>
+    <select id="queryAllAdmin" resultType="edu.gdkm.po.Admin">
+        select * from tb_admin
+    </select>
+    <select id="countNews" resultType="_int">
+        select count(*) from tb_admin;
+    </select>
+    <select id="findAdmin" resultType="admin">
+        select * from tb_admin where
+        account =#{account} and password=#{password}
+    </select>
+    <update id="adminInformation" parameterType="Admin">
+        update tb_admin
+        <set>
+            <if test="status!=null">
+                status = #{status},
+            </if>
+            <if test="username!=null">
+                username=#{username},
+            </if>
+            <if test="email!=null">
+                email=#{email}
+            </if>
+        </set>
+        where
+        adminId=#{adminId}
+    </update>
+  <insert id="addAdmin" parameterType="admin">
+      insert into
+      <include refid="adminSql"/>
+  </insert>
+    <select id="findAcctionAdmin" parameterType="admin" resultType="admin">
+        select * from tb_admin
+        <where>
+            <if test="account!=null">
+                account like concat('%',#{account},'%')
+            </if>
+            <if test="status!=null">
+                and status =#{status}
+            </if>
+        </where>
+    </select>
+
+
+    <select id="queryAllAdminOver" resultType="admin">
+    select * from tb_admin LIMIT #{start},#{end};
+    </select>
+    <select id="selectByAccount" resultType="admin">
+        select * from  tb_admin where account=#{account};
+    </select>
+</mapper>

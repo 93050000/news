@@ -1,0 +1,99 @@
+.wenzhi{
+    display: -webkit-box;/** 对象作为伸缩盒子模型显示 **/
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 4;/** 显示的行数 **/
+    overflow: hidden;
+}
+
+.overOuto{
+    overflow: auto;
+
+}
+.overOuto::-webkit-scrollbar{
+    background-color: rgba(60, 111, 212,0.7);
+    width: 2px;
+}
+.overOuto::-webkit-scrollbar-thumb{
+    background-color: #000;
+    width: 2px;
+}
+.overHider{
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+.jinggao{
+    transition: all 0.3s;
+}
+.jinggao:hover{
+    background: rgba(229, 30, 30,0.7);
+    box-shadow: 1px 2px 3px 4px red;
+}
+
+
+.zhaohein {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+
+
+/*color区*/
+.red-color{
+    color: red;
+}
+.green-color{
+    color: green;
+}
+.lan-color{
+    color: #0a9fdb;
+}
+.hei-color{
+    color: #000;
+}
+
+
+/*边框区*/
+.red-border{
+    border:1px solid red;
+    border-radius: 30px;
+}
+.green-border{
+    border:1px solid  green;
+    border-radius: 30px;
+}
+.lan-border{
+    border:1px solid  #0a9fdb;
+    border-radius: 30px;
+}
+.hei-border{
+   border:1px solid  #000;
+    border-radius: 30px;
+}
+
+/*背景区*/
+.red-back{
+    background: red;
+}
+.green-back{
+    background: green;
+}
+.lan-back{
+    background: #0a9fdb;
+}
+.hei-back{
+    background: #000;
+}
+

@@ -1,0 +1,78 @@
+.pagination {
+            font-size: 80%;
+        }
+        
+.pagination a {
+    text-decoration: none;
+	border: solid 1px #AAE;
+	color: #15B;
+}
+
+.pagination a, .pagination span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 5px;
+	margin-bottom: 5px;
+	min-width:1em;
+	text-align:center;
+}
+
+.pagination .current {
+    background: #26B;
+    color: #fff;
+	border: solid 1px #AAE;
+}
+
+.pagination .current.prev, .pagination .current.next{
+	color:#999;
+	border-color:#999;
+	background:#fff;
+}
+
+
+.wenzhi1,.wenzhi2,.wenzhi3,.wenzhi4,.wenzhi5,.wenzhi6,.wenzhi7,.wenzhi8,.wenzhi9,.wenzhi10{
+    display: -webkit-box;/** 对象作为伸缩盒子模型显示 **/
+    word-break: break-all;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;/** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    overflow: hidden;
+}
+.wenzhi1{
+    -webkit-line-clamp: 1;/** 显示的行数 **/
+}
+.wenzhi2{
+    -webkit-line-clamp: 2;/** 显示的行数 **/
+}
+.wenzhi3{
+    -webkit-line-clamp: 3;/** 显示的行数 **/
+}
+.wenzhi4{
+    -webkit-line-clamp: 4;/** 显示的行数 **/
+}
+.wenzhi5{
+    -webkit-line-clamp: 5;/** 显示的行数 **/
+}
+.wenzhi6{
+    -webkit-line-clamp: 6;/** 显示的行数 **/
+}
+.wenzhi7{
+    -webkit-line-clamp: 7;/** 显示的行数 **/
+}
+.wenzhi8{
+    -webkit-line-clamp: 8;/** 显示的行数 **/
+}
+.wenzhi9{
+    -webkit-line-clamp: 9;/** 显示的行数 **/
+}
+.wenzhi10{
+    -webkit-line-clamp: 10;/** 显示的行数 **/
+}
+
+.wenzhi{
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;/* //文本不换行，这样超出一行的部分被截取，显示...*/
+}

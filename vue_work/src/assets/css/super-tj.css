@@ -1,0 +1,61 @@
+#content .super-tj {
+    width: 80%;
+    text-align: center; /*内容居中显示*/
+    display:flex;
+    margin: 10px auto;
+  }
+  #content .super-tj a {
+    background-color: #fff;
+    width: 25%;
+    margin: 5px;
+    flex:1;
+    display: block; /*设为块级元素*/
+    /* outline: 10px solid #f3f3f3;  */
+  }
+  #content .super-tj a img {
+    width: 100%;
+    height: 290px;
+    background-color: #ebeef3;
+    transition: all 0.3s ease; /*过渡效果*/
+  }
+  #content .super-tj a img:hover {
+    transform: scale(0.95); /*变形效果*/
+  }
+  #content .super-tj a .js {
+    background-color: #fff;
+  }
+  #content .super-tj a .js h3 {
+    /*设置h3的样式*/
+    color: #3a3a3a;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top:5px;
+  }
+  #content .super-tj a .js p {
+    /*p的字体颜色*/
+    color: #a4a4a4;
+    font-size: 15px;
+    margin-top:5px;
+      font-weight: 200;
+  }
+  #content .super-tj a .js span {
+    /*span的样式设置*/
+    color: rgb(177, 33, 33);
+    margin: 10px auto;
+    width:40%;
+    text-align: center;
+    display: block; /*设为块级，让其独占一行*/
+    font-size: 22px; /*字体大小*/
+    font-weight: 400; /*字体加粗*/
+  }
+  
+  #content .super-tj a .js span:hover{
+    background-color: rgb(177, 33, 33);
+    border-radius: 15px;
+    color: #fff;
+  }
+.line-limit-length{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,141 @@
+.container {
+    width: 80%;
+    margin: 10px auto;
+    display:flex;
+    position: relative;
+
+  }
+  .container .logo{
+    width: 20%;
+    text-align: center;
+    height:38px;
+    line-height: 38px;
+    margin-top: 3px;
+  }
+  .container img{
+    width: 100px;
+    height: 20px; 
+  }
+  .container span {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+  }
+  /* list-box */
+  .container .list-box {
+    width: 60%;
+  }
+  .container .list-box .list{
+    width: 100%;
+    display:flex;
+    margin: 5px;
+    justify-content: center;
+  }
+  .container .list-box .list li{
+    width:15%;
+    height:38px;
+    line-height: 38px;
+    /* text-align: center; */
+    margin-left: 130px;
+  }
+  .container .list-box .list li a{
+    color: black;
+    font-size: 17px;
+    height:100%;
+    display: block;
+  }
+  .container .list-box .list li a:hover{
+    color: rgb(163, 38, 38);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  /* 搜索框 */
+  .container .sr{
+    width: 28%;
+    margin-top: 9px;
+  }
+  .container .tet{
+    width: 80%;
+    height: 29px;
+    line-height: 29px;
+    padding-left:10px;
+    border:1px solid #ccc;
+    border-radius:15px 0 0 15px;
+    background: rgba(235, 230, 230, 0.6);
+  }
+  .container .btn{
+    width: 20%;
+    border: none;
+    height:30px;
+    line-height: 30px;
+    cursor: pointer;
+    background:rgb(224, 223, 223);
+    border-radius:0 15px 15px 0;
+  }
+  .container .btn:hover{
+    background:rgb(201, 199, 199);
+  }
+  /* login */
+  .container .login{
+    width: 15%;
+    height: 38px;
+    margin-top: 5px;
+    line-height: 38px;
+    text-align: center;
+    /* background:red; */
+    font-size: 17px;
+  }
+
+/* 二级菜单 */
+.drop{
+  width: 80%;
+  margin: 0px auto;
+  z-index: 3;
+  position: absolute;
+  top: 55px;
+  left: 210px;
+  background: rgb(250, 248, 248);
+}
+.drop .drop-down{
+  width: 100%;
+  display: flex;
+}
+.drop .drop-down li{
+  flex: 1;
+  text-align: center;
+  margin: 20px 10px;
+}
+.drop .drop-down li img{
+  width: 150px;
+  transition: all 0.3s ease; /*过度效果*/
+}
+.drop .drop-down li img:hover{
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.drop .drop-down li .js h4{
+  font-weight: 400;
+  color: black;
+}
+.drop .drop-down li .js span{
+  color: rgb(177, 33, 33);
+  width:50%;
+  display:block;
+  margin:8px auto;
+}
+.drop .drop-down li .js span:hover{
+  background-color: rgb(177, 33, 33);
+  cursor: pointer;
+  border-radius: 15px;
+  color: #fff;
+}
+.drop .modelPhone{
+  display: none;
+}
+.drop .watch{
+  display: none;
+}
+.drop .rell{
+  display: none;
+}
+

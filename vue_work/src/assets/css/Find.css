@@ -1,0 +1,55 @@
+/*tswt*/
+
+.tswt {
+    margin-top: 30px;
+    color: #000000;
+}
+
+.tswt .title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(156, 43, 43);
+    margin-bottom: 20px;
+}
+
+.tswt .tswt-list {
+    border: 1px solid #CCc;
+    margin-bottom: 20px;
+    background-color: rgb(236, 235, 235);
+}
+
+.tswt .tswt-list img {
+    width: 100%;
+    transition: all 0.3s ease;
+    /*过渡效果*/
+}
+
+.tswt .tswt-list img:hover {
+    transform: scale(0.98);
+    /*变形效果*/
+    cursor: pointer;
+}
+
+.tswt .tswt-list h3 {
+    font-weight: 600;
+    /*字体加粗*/
+    margin: 15px;
+    font-size: 30px;
+}
+
+.tswt .tswt-list p {
+    margin: 15px;
+}
+
+.tswt .tswt-list .content a {
+    color: #000000;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+
+.tswt .content {
+    position: relative;
+}

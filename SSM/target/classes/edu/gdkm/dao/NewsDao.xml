@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gdkm.dao.NewsDao">
+
+
+    <select id="queryAllNews" resultType="news">
+        select * from tb_news
+    </select>
+    <select id="queryNewsById" parameterType="int" resultType="news">
+        select * from tb_news where newsId=#{newsId};
+    </select>
+    <delete id="delNewsById" parameterType="int">
+        delete from tb_news where newsId=#{newsId};
+    </delete>
+    <update id="updNews" parameterType="news">
+        update tb_news
+        <set>
+        <if test="newsColumnId!=null">
+            newsColumnId=#{newsColumnId},
+        </if>
+        <if test="title!=null">
+            title=#{title},
+        </if>
+         <if test="account!=null">
+             account=#{account},
+        </if>
+         <if test="num!=null">
+             num=#{num},
+        </if>
+         <if test="createTime!=null">
+             createTime=#{createTime},
+        </if>
+            <if test="pic!=null">
+                pic=#{pic},
+            </if>
+            <if test="appendix!=null">
+                appendix=#{appendix},
+            </if>
+            <if test="video!=null">
+                video=#{video},
+            </if>
+            <if test="appendix!=null">
+                message=#{message},
+            </if>
+        </set>
+        where newsId=#{newsId};
+    </update>
+    <insert id="addNews" parameterType="news">
+        insert into tb_news(newsColumnId,title,account,num,createTime,pic,appendix,video,message)
+        values (#{newsColumnId},#{title},#{account},#{num},#{createTime},#{pic},#{appendix},#{video},#{message})
+    </insert>
+    <select id="queryAllNewsOver" resultType="news">
+        select * from tb_news LIMIT #{start},#{end};
+    </select>
+    <select id="countNews" resultType="_int">
+    SELECT COUNT(*) FROM tb_news
+    </select>
+    <select id="queryNewsFuzzy" resultType="news">
+        select * from tb_news where
+         title like concat('%',#{name},'%') or
+         account like concat('%',#{name},'%') or
+         num like  concat('%',#{name},'%') or
+         message like concat('%',#{name},'%');
+    </select>
+    <select id="queryNewsOne" parameterType="news" resultType="news">
+        select * from tb_news
+        <where>
+            <choose>
+                <when test="newsId!=null">newsId=#{newsId}</when>
+                <when test="newsColumnId!=null">newsColumnId=#{newsColumnId}</when>
+                <when test="title!=null">title like concat('%',#{title},'%')</when>
+                <when test="account!=null">account=#{account}</when>
+                <when test="num!=null">num=#{num}</when>
+                <when test="message!=null">message like concat('%',message,'%')}</when>
+                <otherwise>
+                    1!=1;
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+    <select id="queryNewsList" parameterType="news" resultType="news">
+        select * from tb_news
+        <where>
+            <if test="account!=null">
+                account like concat('%',#{account},'%')
+            </if>
+            <if test="title!=null">
+                and title like concat('%',#{title},'%')
+            </if>
+            <if test="message!=null">
+                and  message like concat('%',#{message},'%')
+            </if>
+            <if test="newsColumnId!=null">
+                and  newsColumnId=#{newsColumnId};
+            </if>
+        </where>
+    </select>
+    <!--返回给前端的页面  要求 该新闻栏目的状态不能为禁止-->
+    <select id="queryNewsByColumStartAll" resultType="news">
+  SELECT ts.* FROM  tb_news ts,tb_newscolumn tb
+      WHERE tb.status!=0 AND ts.newsColumnId=tb.newsColumnId ORDER BY ts.num DESC LIMIT 0,10;
+    </select>
+</mapper>

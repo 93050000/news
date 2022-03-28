@@ -1,0 +1,45 @@
+.active{
+	text-decoration: underline;
+}
+/*fl-list*/
+.fl-list{
+	width: 100%;
+	height: 60px;
+	display: flex;/*运用flex布局*/
+	justify-content: center;/*主轴方向上居中显示*/
+	align-items: center;/*次轴方向上居中显示*/
+	background-color: #c6e4ff;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+.fl-list ul{
+	display: flex;/*运用flex布局*/
+	height: 60px;
+	width: 23%;/*占总宽度的70%*/
+	justify-content: center;/*主轴方向上居中显示*/
+	align-items: center;/*次轴方向上居中显示*/
+}
+.fl-list ul li{
+	flex: 1;/*每个li占一份*/
+	height: 60px;
+	line-height: 60px;/*与height设为相同值，实现垂直方向上文字居中显示*/
+	margin-left: 20px;
+}
+.fl-list ul li span{
+	border-left: 3px solid #000;/*分割线*/
+}
+.fl-list ul li a{
+	font-size: 21px;
+	font-family: "estrangelo edessa";/*字体类型*/
+	height: 25px;
+	line-height: 25px;
+	color: #080808;
+	padding-left: 50px;
+}
+.fl-list ul li a:hover{
+	text-decoration: underline;
+}
+.fl-list ul li:first-child span{
+	border: none;/*清除最后一个span的边框*/
+}

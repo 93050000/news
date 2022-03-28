@@ -1,0 +1,50 @@
+.new-tj {
+    border: 1px solid #ccc; /*设置边框*/
+    margin-top: 20px; /*上外边距*/
+    text-align: center; /*内容水平居中*/
+    background-color: #fff;
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+  }
+  .new-tj a {
+    flex: 1;
+    display: flex; /*运用flex布局*/
+    flex-direction: column; /*垂直排列*/
+    justify-content: center; /*主轴方向上居中显示*/
+    align-items: center; /*次轴方向上居中显示*/
+    border-right: 1px solid #ccc; /*右边框*/
+    border-bottom: 1px solid #ccc; /*下边框*/
+  }
+  .new-tj a img {
+    width: 120px;
+    height: 120px;
+    transition: all 0.3s ease; /*过度效果*/
+  }
+  .new-tj a img:hover {
+    /*变形效果*/
+    transform: scale(1.1);
+  }
+  .new-tj a .js h4 {
+    color: #3a3a3a;
+    font-size: 17px;
+    font-weight: 400;
+  }
+  .new-tj a .js p {
+    color: #a4a4a4;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 5px;
+  }
+  .new-tj a .js span {
+    margin: 7px auto;
+    width:60%;
+    font-size: 16px;
+    color: rgb(177, 33, 33);
+    display: block; /*设为块级，让其独占一行*/
+  }
+  .new-tj a .js span:hover{
+    background-color: rgb(177, 33, 33);
+    border-radius: 15px;
+    color: #fff;
+  }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gdkm.dao.NewscolumnDao">
+    <select id="querAllNewsColum" resultType="newscolumn">
+        select * from tb_newscolumn
+    </select>
+    <select id="queryNewsColumn" parameterType="int" resultType="newscolumn">
+        select * from tb_newscolumn where newsColumnId=#{newsColumnId};
+    </select>
+    <delete id="delNewColunm" parameterType="int">
+        delete from tb_newscolumn where newsColumnId=#{newsColumnId};
+    </delete>
+    <update id="updNewColunm" parameterType="newscolumn">
+        update tb_newscolumn set
+        parentId=#{parentId},columnCode=#{columnCode},columnName=#{columnName},status=${status}
+        where newsColumnId=#{newsColumnId};
+    </update>
+    <insert id="addNewColunm" parameterType="newscolumn">
+        insert into tb_newscolumn(parentId,columnCode,columnName,status)
+        values (#{parentId},#{columnCode},#{columnName},#{status})
+    </insert>
+    <select id="queryFre" resultType="newscolumn">
+        select * from tb_newscolumn
+        <where>
+        <choose>
+            <when test="columnName!=null">
+                columnName=#{columnName}
+            </when>
+            <when test="columnCode!=null">
+                columnCode=#{columnCode}
+            </when>
+            <otherwise>
+            1!=1
+            </otherwise>
+        </choose>
+        </where>
+    </select>
+
+    <select id="selectByPrimary" parameterType="newscolumn" resultType="newscolumn">
+        select * from tb_newscolumn
+        <where>
+            <if test="columnName!=null">
+                columnName like concat('%',#{columnName},'%')
+            </if>
+            <if test="status!=null">
+                and status=#{status}
+            </if>
+        </where>
+    </select>
+    <select id="querCount" parameterType="newscolumn" resultType="newscolumn">
+        select * from tb_newscolumn where columnName=#{columnName};
+    </select>
+    <select id="queryTrue" resultType="newscolumn">
+        SELECT * FROM tb_newscolumn WHERE STATUS='1';
+    </select>
+</mapper>

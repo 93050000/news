@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+    <!--配置数据源，交给spring去做-->
+    <!--给实体类起别名-->
+    <!--<properties resource="database.properties"/>-->
+    <typeAliases>
+        <package name="edu.gdkm.po"/>
+    </typeAliases>
+
+    <mappers>
+         <mapper class="edu.gdkm.dao.AdminDao"/>
+        <mapper class="edu.gdkm.dao.GuanDao"/>
+        <mapper class="edu.gdkm.dao.NewsDao"/>
+        <mapper class="edu.gdkm.dao.NewscolumnDao"/>
+        <mapper class="edu.gdkm.dao.GuestDao"/>
+        <package name="edu.gdkm.mapper"/>
+    </mappers>
+</configuration>

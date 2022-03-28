@@ -1,0 +1,228 @@
+/*最外围的div*/
+#container {
+    height: 520px;
+    overflow: hidden;
+    position: relative;
+    /*相对定位*/
+    margin: 0 auto;
+  }
+  
+  /*包含所有图片的<div>*/
+  #list {
+    height: 520px;
+    position: absolute;
+    /*绝对定位*/
+    z-index: 1;
+  }
+  
+  /*所有的图片<img>*/
+  #list img {
+      width: 1530px;
+      height:520px;
+      float: left;
+    /*浮在左侧*/
+  }
+  
+  /*包含所有圆点按钮的<div>*/
+  #pointsDiv {
+    position: absolute;
+    height: 10px;
+    line-height: 10px;
+    width: 220px;
+    z-index: 2;
+    bottom:15px;
+  }
+  
+  /*所有的圆点<span>*/
+  #pointsDiv span {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    height:7px;
+    width:32px;
+    line-height: 5px;
+    border-radius: 30px;
+    background: rgb(141, 140, 140);
+    margin-right: 10px;
+    opacity: 0.6;
+  }
+  /* #pointsDiv span:hover{
+    background:#333;
+  } */
+  /*第一个<span>*/
+  #pointsDiv .on {
+    background-color: #914444;
+  }
+  
+  /*切换图标<a>*/
+  .arrow {
+    cursor: pointer;
+    display: none;
+    line-height: 50px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    width: 30px;
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    z-index: 2;
+    top: 200px;
+    background-color: RGBA(0, 0, 0, 0.2);
+    color: #fff;
+  }
+  
+  /*鼠标移到切换图标上时*/
+  .arrow:hover {
+    background-color: RGBA(0, 0, 0, 0.5);
+  }
+  
+  /*鼠标移到整个div区域时*/
+  #container:hover .arrow {
+    display: block;
+    /*显示*/
+  }
+  
+  /*上一个切换图标的左外边距*/
+  #prev {
+    left: 20px;
+  }
+  
+  /*下一个切换图标的右外边距*/
+  #next {
+    right: 20px;
+  }
+
+
+
+  /*新增页面的css*/
+  body {
+    margin: 0;
+    padding: 0;
+    font-family:"Microsoft YaHei", "微软雅黑", "consolas";
+  }
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+   
+  .clearfix { 
+    *zoom: 1; 
+  }
+
+  .clearfix:before, .clearfix:after { 
+    display: table; 
+    line-height: 0; 
+    content: "";
+  }
+  
+  .clearfix:after { 
+    clear: both;
+  } 
+   
+  .container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+   
+  .index-bg {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: -50px;
+    z-index: -10;
+  }
+   
+  .news-list {
+    margin: 50px 0;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #DDD;
+    padding: 30px 20px;
+    /* max-width: 1200px; */
+    min-height: 300px;
+  }
+  .news-list:hover {
+    box-shadow: 0 0 5px 3px #CCC;
+  }
+   
+  .about .about-des {
+    border-left: 5px solid #CCC;
+    margin-top: 15px;
+  }
+   
+  .about .about-des p {
+    padding-left: 10px;
+    line-height: 28px;
+    text-indent: 2em;
+  }
+   
+  .news-list-left {
+    float: left;
+    width: 729px;
+    margin-bottom: 50px;
+  }
+   
+  .news-list-right {
+    float: right;
+    width: 229px;
+    height: 500px;
+  }
+
+  .news-list-item {
+    padding: 20px 30px;
+  }
+   
+  .author-time {
+    font-size: 14px;
+  }
+  .news-des {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #CCC;
+  }
+  .news-title {
+    font-size: 23px;
+  }
+  .news-title i {
+    display: inline-block;
+    width: 47px;
+    height: 43px;
+    margin-right: 10px;
+    background: url('../img/Newslabel.png') left center no-repeat;
+    vertical-align: middle;
+  }
+  .news-title a {
+    color: green;
+  }
+  .news-title a:hover {
+    text-decoration: underline;
+  }
+  .news-content-des {
+    line-height: 28px;
+  }
+   
+  .copyright {
+    clear: both;
+    text-align: center;
+    color: gray;
+   
+    border-top: 2px solid #CCC;
+    margin-top: 50px;
+    padding: 20px 0;
+  }
+
+  button{
+    width: 60px;
+    height: 30px;
+  }
+
+  .line-limit-length {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+  }
+
+  
+
+
+

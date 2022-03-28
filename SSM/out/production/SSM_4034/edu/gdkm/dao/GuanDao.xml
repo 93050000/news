@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.gdkm.dao.GuanDao">
+    <select id="queryAllGuan" resultType="guan">
+        select * from tb_guan
+    </select>
+    <select id="queryGuan" parameterType="int" resultType="guan">
+        select * from tb_guan where guanId=#{guanId};
+    </select>
+    <delete id="delGuanById" parameterType="int">
+        delete from tb_guan where guanId=#{guanId};
+    </delete>
+    <update id="updGuan" parameterType="guan">
+        update tb_guan set
+        guanAccount=#{guanAccount},password=#{password},username=#{username}
+        where guanId=#{guanId};
+    </update>
+    <insert id="addGuan" parameterType="guan">
+        insert into tb_guan(guanAccount,password,username)
+        values (#{guanAccount},#{password},#{username})
+    </insert>
+    <select id="findGuan" resultType="guan">
+        select * from tb_guan where guanAccount=#{guanAccount};
+    </select>
+
+</mapper>
